@@ -1,12 +1,12 @@
 
 
 📁 Dataset
-The dataset used in this project is very large, so it is hosted on Google Drive instead of GitHub.
+the dataset is in open source in kaggale. it contain different types of imges for classification of waste.
 
 🔗 👉 **[Download Dataset](https://drive.google.com/drive/folders/1oEEai8Hz5nQGaU7gdTcMyiS0K22C75Wi )**
 
 
 📦 Dataset Includes
-  -  Train Dataset – For training the model
-  -  Validation Dataset – For tuning the model
-  -  Test Dataset – For evaluating performance
+  -  Train Dataset – For training 60%
+  -  Validation Dataset – For validate 20%
+  -  Test Dataset – For evaluating performance 20%
