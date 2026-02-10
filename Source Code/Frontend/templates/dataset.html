@@ -1,0 +1,115 @@
+{% extends "Navbar.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='database.css') }}">
+
+<div class="root">
+
+    <div class="dataset-container">
+    <div class="dataset-card">
+        <h2 class="title">📘 Dataset Description</h2>
+
+        <p class="desc">
+
+  <p>
+    I used <strong>three publicly available garbage classification datasets from Kaggle</strong> to build the dataset for this project. 
+    These datasets contain images of various household waste items photographed in different environments, enhancing the model’s 
+    ability to generalize.
+  </p>
+
+  <p>
+    The combined dataset includes categories such as <strong>cardboard, glass, paper, metal, plastic, trash, biological waste, 
+    clothes, green glass, brown glass,</strong> and <strong>batteries</strong>. Each dataset contributes unique samples, helping create 
+    a more diverse and balanced dataset.
+  </p>
+
+  <p>
+    To prepare the dataset for training, the images were divided into:
+  </p>
+
+  <ul>
+    <li><strong>60%</strong> for training</li>
+    <li><strong>20%</strong> for testing</li>
+    <li><strong>20%</strong> for validation</li>
+  </ul>
+
+  <p>
+    This split ensures effective training, fair evaluation, and proper validation using unseen data, 
+    helping prevent overfitting and improving overall model performance.
+  </p>
+
+
+        </p>
+
+        <div class="info-box">
+            <h3>📊 Categories Included</h3>
+            <ul>
+                <li>Plastic</li>
+                <li>Metal</li>
+                <li>Glass</li>
+                <li>biological</li>
+                <li>Paper</li>
+                <li>Cardboard</li>
+                <li>Battery</li>
+                <li>Clothes</li>
+                <li>Metal</li>
+                <li>Shoes</li>
+                <li>Trash</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>📁 Dataset Size</h3>
+            <p>Total Images: <strong>20000+</strong></p>
+            <!-- Kaggle Dataset Navigation -->
+<div class="dataset-access">
+  <h3>Dataset Access</h3>
+  <p>
+    Click the button below to directly visit the official Kaggle page
+    of the Breast Ultrasound Images (BUSI) dataset and download it.
+  </p>
+
+  <a
+    href="https://www.kaggle.com/datasets/mostafaabla/garbage-classification"
+    target="_blank"
+    class="kaggle-link"
+  >
+    Click Here To Download The Dataset
+  </a>
+ 
+</div>
+<!-- Sample Images Section -->
+<div class="info-box">
+  <h3>🖼️ Sample Dataset Images</h3>
+  <p>Click on any image to download a sample from the dataset.</p>
+
+  <div class="sample-images">
+    <a href="{{ url_for('static', filename='samples/plastic.jpg') }}" download>
+      <img src="{{ url_for('static', filename='samples/plastic.jpg') }}" alt="Plastic Sample">
+    </a>
+
+    <a href="{{ url_for('static', filename='samples/shoes.jpg') }}" download>
+      <img src="{{ url_for('static', filename='samples/shoes.jpg') }}" alt="Metal Sample">
+    </a>
+
+    <a href="{{ url_for('static', filename='samples/carboard.jpg') }}" download>
+      <img src="{{ url_for('static', filename='samples/carboard.jpg') }}" alt="Glass Sample">
+    </a>
+
+    <a href="{{ url_for('static', filename='samples/paper7.jpg') }}" download>
+      <img src="{{ url_for('static', filename='samples/paper7.jpg') }}" alt="Paper Sample">
+    </a>
+  </div>
+</div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>🎯 Purpose</h3>
+            <p>This dataset is used for training, validation, and testing of the WasteNet Model.</p>
+            
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

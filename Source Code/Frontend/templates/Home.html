@@ -1,0 +1,86 @@
+{% extends "navbar.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+
+<section class="hero text-center">
+  <div class="hero-content container">
+    <h1>Waste Classification Using Deep Learning</h1>
+    <p>Empowering smarter and automatic waste sorting to promote sustainability.</p>
+    <a href="{{ url_for('upload_page') }}" class="btn btn-primary">Get Started</a>
+  </div>
+</section>
+
+<!-- Info Cards Section -->
+<section class="container my-5">
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title text-success">What is Garbage Classification?</h5>
+          <p class="card-text">
+            Garbage classification is the process of categorizing waste into biodegradable, recyclable,
+            hazardous, and electronic waste. This ensures better recycling, reduces pollution,
+            and supports sustainable living.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title text-success">Benefits</h5>
+          <ul>
+            <li>Promotes recycling and reduces landfill waste</li>
+            <li>Prevents pollution and protects the environment</li>
+            <li>Supports sustainable development</li>
+            <li>Reduces greenhouse gas emissions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title text-success">Types of Waste</h5>
+          <ul>
+            <li><b>Biodegradable</b> – food scraps, garden waste, paper</li>
+            <li><b>Recyclable</b> – plastics, glass, metals, cardboard</li>
+            <li><b>Hazardous</b> – batteries, chemicals, medical waste</li>
+            <li><b>E-Waste</b> – computers, mobiles, electronics</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- How It Works (polished cards) -->
+<section class="how-section container">
+  <h2 class="section-title">How It Works</h2>
+
+  <div class="how-grid">
+    <div class="how-card">
+      <h3>Image Upload</h3>
+      <p>Upload an image of waste from your phone or camera to analyze with our AI model.</p>
+    </div>
+
+    <div class="how-card">
+      <h3>Deep Learning</h3>
+      <p>Our model uses a trained neural network to classify the waste accurately and efficiently.</p>
+    </div>
+
+    <div class="how-card">
+      <h3>Instant Results</h3>
+      <p>Receive fast and reliable predictions to help segregate waste for recycling or disposal.</p>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="footer mt-5 mb-3">
+  <p>© 2025 Waste Classification Project. All rights reserved.</p>
+</footer>
+{% endblock %}

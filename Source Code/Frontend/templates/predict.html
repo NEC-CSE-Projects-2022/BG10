@@ -1,0 +1,63 @@
+{% extends "navbar.html" %}
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='predit.css') }}">
+
+<div class="container">
+
+    <!-- Upload Card -->
+    <div class="card">
+        <h2 class="title">Garbage Classification</h2>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form action="{{ url_for('predict_route') }}"
+              method="POST"
+              enctype="multipart/form-data">
+
+            <input type="file"
+                   name="images[]"
+                   accept="image/*"
+                   class="file-input"
+                   multiple
+                   required>
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+    </div>
+
+    <!-- RESULTS -->
+    {% if results %}
+        {% for r in results %}
+        <div class="card">
+            <h3 class="subtitle">Prediction Result</h3>
+
+            <!-- Image Preview -->
+            <img src="{{ r.image_url }}" class="preview-img">
+
+            <!-- 🔴 STEP 3: INVALID IMAGE MESSAGE -->
+            {% if r.error %}
+                <p class="error" style="margin-top:10px;">
+                    ⚠️ {{ r.error }}
+                </p>
+            {% endif %}
+
+            <!-- Prediction -->
+            <p class="result">
+                Class:
+                <span class="highlight">{{ r.prediction }}</span>
+            </p>
+
+            <!-- Confidence -->
+            <p class="confidence">
+                Confidence: {{ r.confidence }}
+            </p>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+</div>
+
+{% endblock %}

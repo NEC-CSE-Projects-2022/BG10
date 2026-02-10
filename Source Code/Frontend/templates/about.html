@@ -1,0 +1,58 @@
+{% extends "Navbar.html" %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+
+<div class="about-container">
+
+    <header class="about-header">
+        <h1>WasteNet – Smart Garbage Classification System</h1>
+        <p>Real-Time Waste Classification using RepVGG-MEM Model</p>
+    </header>
+
+    <section class="about-section">
+        <h2>About the Project</h2>
+        <p>
+            WasteNet is an intelligent waste classification system that uses the RepVGG-MEM
+            deep learning model to classify different types of waste such as plastic, metal, glass,
+            shoes, clothes, and biodegradable waste.
+        </p>
+        <p>
+            The model achieves <b>95.06% accuracy</b> after using EMA, Mixup augmentation 
+            and structured pruning, making it suitable for smart bins and real-time waste monitoring.
+        </p>
+    </section>
+
+    <section class="methodology-section">
+        <h2>Methodology</h2>
+        <p>
+            The methodology follows a structured pipeline from dataset preparation to the final classification output.
+        </p>
+
+        <h3>Block Diagram</h3>
+
+        <div class="diagram">
+            <img src="{{ url_for('static', filename='blockdiagram.png.jpg') }}" alt="Block Diagram">
+        </div>
+
+        <ul class="steps-list">
+            <li><b>Data Collection:</b> TrashNet, Kaggle Garbage Dataset, PublicGarbageNet</li>
+            <li><b>Preprocessing:</b> Resizing, Normalization</li>
+            <li><b>Augmentation:</b> Horizontal flip, Rotation</li>
+            <li><b>Architecture:</b> RepVGG-MEM with MSCA</li>
+            <li><b>Performance Boost:</b> EMA + Structured Pruning</li>
+            <li><b>Output:</b> Predicted waste category</li>
+        </ul>
+    </section>
+    <section class="goal">
+        <h2>Project Goal</h2>
+        <p>
+            The main goal of WasteNet is to provide an efficient, real-time waste classification model that can be 
+            integrated into smart bins, IoT-based waste management systems, and eco-friendly recycling platforms.
+        </p>
+    </section>
+
+</div>
+
+{% endblock %}
