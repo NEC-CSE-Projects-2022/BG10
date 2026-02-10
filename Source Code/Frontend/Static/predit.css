@@ -1,0 +1,105 @@
+:root {
+    --page-bg: rgb(207, 217, 224);
+}
+
+/* Make full page use the background */
+html, body {
+    background-color: var(--page-bg) !important;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.container {
+    width: 100%;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+/* Card style */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+.subtitle {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Error message */
+.error {
+    color: #b30000;
+    background: #ffecec;
+    border-left: 5px solid #ff4d4d;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* File input */
+.file-input {
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+}
+
+/* Button */
+.btn {
+    margin-top: 18px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg,#1f8a8a 0%, #2fb6b0 100%);
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.btn:hover {
+    background: #0056b3;
+}
+
+/* Preview image */
+.preview-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* Highlighted prediction name */
+.highlight {
+    color: #007bff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Result text */
+.result, .confidence {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Top 5 list */
+.top5 {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.top5 li {
+    padding: 6px 0;
+    font-size: 16px;
+}
