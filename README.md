@@ -3,13 +3,13 @@
 
 ## Team Info
 - 22471A0597 — **kakumanu Sravani** ( [LinkedIn](https://www.linkedin.com/in/kakumanu-sravani-206663363/) )
-_Work Done: xxxxxxxxxx_
+_Work Done: Designed and implemented the RepVGG-MEM framework integrating MSCA attention, EMA, and pruning techniques. Managed experimental setup, hyperparameter tuning, and final model evaluation.Prepared research documentation, methodology diagrams, and result analysis for the paper
 
 - 22471A05A4 — **kondavarju Ramya** ( [LinkedIn](https://www.linkedin.com/in/ramya-kondavarju-060662282/) )
-_Work Done: xxxxxxxxxx_
+_Work Done: Developed the system workflow and block diagram of the proposed RepVGG-based waste classification pipeline.Assisted in preprocessing visualization (before–after results), dataset distribution analysis.
 
 - 22471A0584— **Chinthalanka Poojitha** ( [LinkedIn](www.linkedin.com/in/ch-poojitha-501a62287) )
-_Work Done: xxxxxxxxxx_
+_Work Done:Contributed to dataset collection and organization from TrashNet, Kaggle, and PublicGarbageNet sources. Performed data preprocessing including resizing, Gaussian blur, CLAHE enhancement, normalization, and augmentation techniques. Assisted in training the RepVGG-based model and evaluating performance using accuracy and F1-score metrics.
 
 
 ---
