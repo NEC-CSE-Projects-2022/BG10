@@ -1,0 +1,4 @@
+Py -m pip install flask werkzeug
+Pu -m pip install pillow 
+Py -m pip install torch torchvision torchaudio
+Py -m pip install --upgrade pip
